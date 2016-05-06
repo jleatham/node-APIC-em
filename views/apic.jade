@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  h1 Apic Page
+  h2 A test environment for nodeJS and APIC-EM
+
+
+
+
+  hr
+  .row
+    .col-sm-6
+      h2 Get APIs
+      form#apitestform
+        //input(type='submit', value='Send')  
+        button.btn.btn-default.btn-block(type='submit', value='Send') Network Device API call
+      #apiarea
+      form#apitestform2
+        //input(type='submit', value='Send')  
+        button.btn.btn-default.btn-block(type='submit', value='Send') Display Device Hostnames
+      #apiarea2
+    .col-sm-6
+      h2 SocketIO examples
+      form#getInt.form-inline
+        .form-group
+          label(for='set_int') Text
+          input#set_int.form-control(type='text', placeholder='Time in ms(1000=1s)')
+        button.btn.btn-default(type='submit') Send      
+      #date
+        p Date received from socket IO: 
+        p.date.lead  
+      form#testform.form-inline
+        .form-group
+          label(for='chat_input') Text
+          input#chat_input.form-control(type='text', placeholder='Socket IO text return example')
+        button.btn.btn-default(type='submit') Send
+      //form#testform
+        //input#chat_input(type='text')
+        //input.btn(type='submit', value='Send')
+      #future
+        p.lead 
+  //  .col-sm-6
+  //    h2 Post
+  //    p depricated form posts that were replaced with socket IO
+  //    form(method='post')
+  //      input(type='hidden', name='_csrf', value=_csrf) 
+  //      button.btn.btn-primary(type='submit', target='/apic') Submit Does Nothing Now
